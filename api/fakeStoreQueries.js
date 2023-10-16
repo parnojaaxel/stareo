@@ -35,3 +35,11 @@ export const deleteProduct  = async (product_id) => {
         console.log(error.response.data.message);
         }
 }
+export const editProduct = async (product_id, updatedData) => {
+    try {
+        const response = await fakeStoreAPI.put(`/products/${product_id}`, updatedData);
+        return response.data;
+    } catch (error) {
+        console.log(error.response.data.message);
+    }
+}

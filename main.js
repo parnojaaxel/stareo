@@ -1,4 +1,4 @@
-import { getProducts, getProductByID, createProduct, deleteProduct } from "./api/fakeStoreQueries";
+import { getProducts, getProductByID, createProduct, deleteProduct, editProduct } from "./api/fakeStoreQueries";
 
 await getProducts();
 await getProductByID(1);
@@ -11,4 +11,7 @@ await createProduct({
     image: 'https://i.pravatar.cc',
     category: 'electronic'
 });
-await deleteProduct(1);
+
+//await deleteProduct(1);
+
+await editProduct(1 ,{title: 'wasap'})
